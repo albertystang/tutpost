@@ -1,0 +1,12 @@
+{% extends "layouts/c.html" %}
+
+{% block content %}
+    <h1>Sign Up</h1>
+    <br>
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>        
+        <button type="submit" class="btn btn-secondary">Sign Up</button>
+    </form>     
+{% endblock content %}
